@@ -19,6 +19,7 @@ app.use(cookieParser());
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/tasks", taskRouter);
 
+app.get("/", (req,res) => res.send("Server is ready"))
 app.use(notFound);
 app.use(errorHandler);
 
