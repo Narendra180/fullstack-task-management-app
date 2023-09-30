@@ -13,11 +13,11 @@ router.use(protect);
 
 router.route("/")
       .get(getAllTasks)
-      .post(createTask);
+      .post(createTask)
 
-router.route("/tasks/:id")
+router.route("/:id")
       .get(getTask)
-      .patch(updateTask)
       .delete(deleteTask)
+      .patch(updateTask)
 
 export default router;
