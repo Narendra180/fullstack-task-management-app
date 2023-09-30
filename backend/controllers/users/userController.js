@@ -21,7 +21,6 @@ const registerUser = asyncHandler(async (req,res) => {
   })
 
   if(user) {
-    user.validate();
     generateToken(res, user._id);
     return res.status(201).json({
       _id: user._id,

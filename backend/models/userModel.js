@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+import { taskSchema } from "./taskModel.js";
 
 const userSchema = mongoose.Schema({
   name: {
@@ -16,6 +17,10 @@ const userSchema = mongoose.Schema({
     required: true,
     minLength: [7, "Required atleast 7 charcters"],
     maxLength: [15, "Maximum characters are 15"]
+  },
+  tasks: {
+   type: [taskSchema],
+   select: false
   }
 }, {
   timeStamps: true

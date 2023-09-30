@@ -1,12 +1,13 @@
 import mongoose, { mongo } from "mongoose";
 
-const taskSchema = mongoose.Schema({
+export const taskSchema = mongoose.Schema({
   name: {
     type: String,
     required: true
   },
   description: {
-    type: String
+    type: String,
+    default: ""
   },
   completed: {
     type: Boolean,
