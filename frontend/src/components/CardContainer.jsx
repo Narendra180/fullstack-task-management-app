@@ -1,6 +1,6 @@
 import { Container,Row,Col } from 'react-bootstrap';
 
-const FormContainer = ({children}) => {
+const CardContainer = ({children}) => {
   return (
     <Container>
       <Row className="justify-content-md-center mt-5">
@@ -12,4 +12,4 @@ const FormContainer = ({children}) => {
   )
 }
 
-export default FormContainer;
+export default CardContainer;

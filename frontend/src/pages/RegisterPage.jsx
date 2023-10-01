@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import FormContainer from '../components/FormContainer';
+import FormContainer from '../components/CardContainer';
 import { toast } from 'react-toastify';
 import Loading from '../components/Loading';
 import { useRegisterMutation } from '../redux/slices/usersApiSlice';

@@ -18,6 +18,6 @@ router.route("/")
 router.route("/:id")
       .get(getTask)
       .delete(deleteTask)
-      .patch(updateTask)
+      .put(updateTask)
 
 export default router;

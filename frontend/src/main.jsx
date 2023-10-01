@@ -16,7 +16,8 @@ import PrivateRoute from './pages/PrivateRoute.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
-import NewTask from './pages/NewtaskPage.jsx';
+import NewTaskPage from './pages/NewtaskPage.jsx';
+import TasksListPage from './pages/TasksListPage.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,7 +29,9 @@ const router = createBrowserRouter(
       {/* Private Routes */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfilePage />} />
-        <Route path='/tasks/new' element={<NewTask />} />
+        <Route path='/tasks/new' element={<NewTaskPage key="new-task" />} />
+        <Route path='/tasks' element={<TasksListPage />} />
+        <Route path='/tasks/:id' element={<NewTaskPage key="edit-task" isEditComp={true} />} />
       </Route>
     </Route>
   )
