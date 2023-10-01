@@ -68,14 +68,14 @@ const logoutUser = asyncHandler(async (req,res) => {
 // Route: GET /api/v1/users/profile
 // Access: Private
 const getUserProfile = asyncHandler(async (req,res) => {
-  const { _id:id, name, email } = req.user;
-  const user = { id, name, email }
+  const { _id, name, email } = req.user;
+  const user = { _id, name, email }
   res.status(200).json(user);
 })
 
 
 // Description: Update the user.
-// Route: POST /api/v1/users/profile
+// Route: PUT /api/v1/users/profile
 // Access: Private
 const updateUserProfile = asyncHandler(async (req,res) => {
   const user = await User.findById({ _id: req.user._id })
@@ -84,9 +84,9 @@ const updateUserProfile = asyncHandler(async (req,res) => {
     user.email = req.body.email || user.email;
 
     if(req.body.password) user.password = req.body.password;
-    const { _id: id, name, email } = await user.save();
+    const { _id, name, email } = await user.save();
     res.status(200).json({
-      id, name, email
+      _id, name, email
     })
   } else {
     res.status(400);

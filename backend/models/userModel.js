@@ -14,9 +14,7 @@ const userSchema = mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
-    minLength: [7, "Required atleast 7 charcters"],
-    maxLength: [15, "Maximum characters are 15"]
+    required: true
   },
   tasks: {
    type: [taskSchema],
