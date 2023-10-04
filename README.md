@@ -1,6 +1,6 @@
 # Fullstack Task management Web Application made using MERN Stack.
 
-Backend is implemented using Express js, Mongodb atlas, Mongoose js, JWT.
+Backend is implemented using Express js, Mongodb atlas, Mongoose js, JWT.  
 Frontend is implemented using React js, Vite js tooling, React Bootstrap, React router dom, Redux js.
 
 ## To run the app in development mode:
