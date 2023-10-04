@@ -71,7 +71,10 @@ const TaskListItem = ({ task, refetch, index }) => {
               >
                 <AiFillDelete />
                 {
-                  isDeleting && <Spinner className="task-list-item-delete-spinner" />
+                  isDeleting &&
+                  <div className="task-list-item-delete-spinner-container">
+                    <Spinner className="task-list-item-delete-spinner" />                  
+                  </div>
                 }
               </Button>
             </Col>

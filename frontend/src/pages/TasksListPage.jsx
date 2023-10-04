@@ -33,7 +33,7 @@ const TasksListPage = () => {
           {
             !tasks?.length && !isLoading
             ?
-            <p>
+            <p style={{fontSize: "1.25rem"}}>
               Tasks are not yet Created.
             </p>
             :
