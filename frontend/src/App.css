@@ -1,0 +1,138 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.app-root-div input, .app-root-div textarea {
+  border: 1px solid #bbbbbb;
+}
+
+h1.page-heading {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 20px;
+}
+
+.tasklist-page-create-task-link {
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgb(84, 98, 245);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+}
+
+.list-group.list-group-items-container {
+  margin-bottom: 30px;
+}
+
+
+.list-group-item.tasklist-page-group-item {
+  font-size: 1.125rem;
+  border: 1px solid #bbbbbb;
+}
+
+.list-group-item p.task-name-p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.list-group-item  .list-item {
+  padding: 10px;
+}
+
+.list-group-item .list-item div.column {
+  display: flex;
+  align-items: center;
+}
+
+.column .icon-container {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+
+.icon-container .check-icon {
+  color: green;
+}
+
+.icon-container .cross-icon {
+  color: red;
+}
+
+.btn-container .desc-text {
+  vertical-align: middle;
+}
+
+/* view task styles */
+
+.name-edit-btn-container .btn-container {
+  text-align: right;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+.name-edit-btn-container h2 {
+  /* display: flex; */
+  /* align-items: center; */
+  font-size: 1.5rem;
+}
+
+.name-edit-btn-container h2 .icon-span {
+  margin-right: 5px;
+}
+
+.name-edit-btn-container h2 span {
+  vertical-align: middle;
+}
+
+.view-page-task-container p.description-p {
+  font-size: 1.25rem;
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  .hidden-icons-column {
+    position: relative;
+  }
+  .hidden-icons-column .hidden-icons-row {
+    display: none;
+  }
+  .hidden-icons-column .hidden-icons-row.visible {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 33px;
+    z-index: 10;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 10px;
+  }
+  .hidden-icons-column .hidden-icons-row.visible button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  /* .hidden-icons-container.visible .hidden-icons-row {
+    display: flex;
+    flex-direction: column;
+  } */
+}
+
+@media screen and (min-width: 769px) {
+  .hidden-icons-column .more-icon-container {
+    display: none;
+  }
+
+  .hidden-icons-column button {
+    font-size: 1.125rem;
+  }
+}
+

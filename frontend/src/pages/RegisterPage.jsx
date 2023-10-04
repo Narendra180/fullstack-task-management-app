@@ -36,7 +36,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if(userInfo) {
-      navigate('/');
+      navigate('/tasks');
     }
   }, [navigate,userInfo]);
 
@@ -47,7 +47,7 @@ const RegisterPage = () => {
       try {
         const res = await register({ name, email, password }).unwrap();
         dispatch(setCredentials({...res}));
-        navigate('/');
+        navigate('/tasks');
       } catch(err) {
         toast.error(err?.data?.message || err.error);
       }

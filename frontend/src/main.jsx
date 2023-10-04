@@ -18,6 +18,7 @@ import RegisterPage from './pages/RegisterPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import NewTaskPage from './pages/NewtaskPage.jsx';
 import TasksListPage from './pages/TasksListPage.jsx';
+import ViewTaskPage from './pages/ViewTaskPage.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +32,8 @@ const router = createBrowserRouter(
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/tasks/new' element={<NewTaskPage key="new-task" />} />
         <Route path='/tasks' element={<TasksListPage />} />
-        <Route path='/tasks/:id' element={<NewTaskPage key="edit-task" isEditComp={true} />} />
+        <Route path='/tasks/:id/edit' element={<NewTaskPage key="edit-task" isEditComp={true} />} />
+        <Route path='/tasks/:id/' element={<ViewTaskPage />} />
       </Route>
     </Route>
   )

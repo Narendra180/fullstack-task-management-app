@@ -57,7 +57,7 @@ const NewTask = ({ isEditComp }) => {
 
   return (
     <FormContainer>
-      <h1>
+      <h1 className='page-heading'>
         {!isEditComp?"Create Task":"Edit Task"}
       </h1>
       <Form onSubmit={handleSubmit}>

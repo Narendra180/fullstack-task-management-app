@@ -3,10 +3,11 @@ import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-root-div">
       <Header />
       <ToastContainer />
       <Container className="my-2">

@@ -22,7 +22,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if(userInfo) {
-      navigate('/');
+      navigate('/tasks');
     }
   }, [navigate,userInfo]);
   
@@ -41,7 +41,7 @@ const LoginPage = () => {
     try {
       const res = await login(formState).unwrap();
       dispatch(setCredentials({...res}));
-      navigate('/');
+      navigate('/tasks');
     } catch(err) {
       toast.error(err?.data?.message || err.error);
     }

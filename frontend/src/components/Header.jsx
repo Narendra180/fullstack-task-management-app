@@ -24,11 +24,13 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className="app-header">
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>Task Manager</Navbar.Brand>
+          <LinkContainer to={userInfo?"/tasks":"/"}>
+            <Navbar.Brand>
+              Task Manager
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>

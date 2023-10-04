@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Container from 'react-bootstrap/Container';
-import { Row, Col } from 'react-bootstrap';
+import  { ListGroup, Container, Row, Col }from 'react-bootstrap';
 import { useGetAllTasksQuery } from '../redux/slices/tasksApiSlice';
 import Loading from '../components/Loading';
 import { Link } from 'react-router-dom';
@@ -18,13 +16,17 @@ const TasksListPage = () => {
   },[]);
 
   return (
-    <Container className='mt-5'>
+    <Container className='mt-5 tasklist-page'>
       <Row className="justify-content-md-center">
-        <Col lg="6">
+        <Col>
           
-          <h1>Tasks</h1>
+          <div className="tasklist-page-header">
+            <h1 className='page-heading'>Tasks</h1>
 
-          <Link to={"/tasks/new"}>Create Task</Link>
+            <Link className='tasklist-page-create-task-link' to={"/tasks/new"}>
+              Create Task
+            </Link>
+          </div>
           
           {isLoading && <Loading />}
 
@@ -37,20 +39,21 @@ const TasksListPage = () => {
             :
             (
               <>
-              <ListGroup className='mt-3'>
-                {
-                  tasks?.map(task => {
-                    return (
-                      <TaskListItem 
-                        key={task["_id"]}
-                        task={task}
-                        refetch={refetch}
-                      />
-                    )
-                  })
-                }
-              </ListGroup>
-            </>
+                <ListGroup className="list-group-items-container">
+                  {
+                    tasks?.map((task,i) => {
+                      return (
+                        <TaskListItem 
+                          key={task["_id"]}
+                          task={task}
+                          refetch={refetch}
+                          index={i}
+                        />
+                      )
+                    })
+                  }
+                </ListGroup>
+              </>
             )
           }                        
         </Col>

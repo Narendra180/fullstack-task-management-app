@@ -1,10 +1,19 @@
+import { useEffect } from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
 
+  const navigate = useNavigate();
   const { userInfo } = useSelector(state => state.auth);
+
+  useEffect(() => {
+    if(userInfo) {
+      navigate('/tasks');
+    }
+  }, [navigate,userInfo]);
 
   return (
     <div className=' py-5'>
